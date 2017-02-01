@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ChooseScaleViewController: UIViewController, UITableViewDelegate {
+class ChooseScaleViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+    
     let scalesArray: [DurometerModel.Scale] = [.shore,
                                                .a,
                                                .b,
@@ -26,8 +28,26 @@ class ChooseScaleViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        title = "Duromod"
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Default")
+            
         print("\(DurometerModel(scale: .a).getModulus(measuredHardness: 0.9))")
     }
 
+}
+
+extension ChooseScaleViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Default")!
+        //cell.textLabel!.text = "Hello World"
+        cell.textLabel!.text = scalesArray[indexPath.row].rawValue
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return scalesArray.count
+    }
+    
+    
 }
