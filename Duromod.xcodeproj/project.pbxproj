@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E4228AD01E3EE1AB00E8A098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228ACF1E3EE1AB00E8A098 /* AppDelegate.swift */; };
-		E4228AD21E3EE1AB00E8A098 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AD11E3EE1AB00E8A098 /* ViewController.swift */; };
+		E4228AD21E3EE1AB00E8A098 /* ChooseScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AD11E3EE1AB00E8A098 /* ChooseScaleViewController.swift */; };
 		E4228AD51E3EE1AB00E8A098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4228AD31E3EE1AB00E8A098 /* Main.storyboard */; };
 		E4228AD71E3EE1AB00E8A098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4228AD61E3EE1AB00E8A098 /* Assets.xcassets */; };
 		E4228ADA1E3EE1AB00E8A098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4228AD81E3EE1AB00E8A098 /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		E4228ACC1E3EE1AB00E8A098 /* Duromod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duromod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4228ACF1E3EE1AB00E8A098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4228AD11E3EE1AB00E8A098 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4228AD11E3EE1AB00E8A098 /* ChooseScaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseScaleViewController.swift; sourceTree = "<group>"; };
 		E4228AD41E3EE1AB00E8A098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4228AD61E3EE1AB00E8A098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4228AD91E3EE1AB00E8A098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				E4228ACF1E3EE1AB00E8A098 /* AppDelegate.swift */,
+				E4228AD11E3EE1AB00E8A098 /* ChooseScaleViewController.swift */,
 				E4228AFD1E3EE30100E8A098 /* DurometerModel.swift */,
-				E4228AD11E3EE1AB00E8A098 /* ViewController.swift */,
 				E4228AD31E3EE1AB00E8A098 /* Main.storyboard */,
 				E4228AD61E3EE1AB00E8A098 /* Assets.xcassets */,
 				E4228AD81E3EE1AB00E8A098 /* LaunchScreen.storyboard */,
@@ -265,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4228AD21E3EE1AB00E8A098 /* ViewController.swift in Sources */,
+				E4228AD21E3EE1AB00E8A098 /* ChooseScaleViewController.swift in Sources */,
 				E4228AFE1E3EE30100E8A098 /* DurometerModel.swift in Sources */,
 				E4228AD01E3EE1AB00E8A098 /* AppDelegate.swift in Sources */,
 			);

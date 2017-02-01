@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ChooseScaleViewController: UIViewController, UITableViewDelegate {
 
     let scalesArray: [DurometerModel.Scale] = [.shore,
                                                .a,
