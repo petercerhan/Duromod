@@ -14,6 +14,7 @@
 		E4228ADA1E3EE1AB00E8A098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4228AD81E3EE1AB00E8A098 /* LaunchScreen.storyboard */; };
 		E4228AE51E3EE1AC00E8A098 /* DuromodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AE41E3EE1AC00E8A098 /* DuromodTests.swift */; };
 		E4228AF01E3EE1AC00E8A098 /* DuromodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AEF1E3EE1AC00E8A098 /* DuromodUITests.swift */; };
+		E4228AFE1E3EE30100E8A098 /* DurometerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AFD1E3EE30100E8A098 /* DurometerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E4228AEB1E3EE1AC00E8A098 /* DuromodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuromodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4228AEF1E3EE1AC00E8A098 /* DuromodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuromodUITests.swift; sourceTree = "<group>"; };
 		E4228AF11E3EE1AC00E8A098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4228AFD1E3EE30100E8A098 /* DurometerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurometerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E4228ACF1E3EE1AB00E8A098 /* AppDelegate.swift */,
+				E4228AFD1E3EE30100E8A098 /* DurometerModel.swift */,
 				E4228AD11E3EE1AB00E8A098 /* ViewController.swift */,
 				E4228AD31E3EE1AB00E8A098 /* Main.storyboard */,
 				E4228AD61E3EE1AB00E8A098 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4228AD21E3EE1AB00E8A098 /* ViewController.swift in Sources */,
+				E4228AFE1E3EE30100E8A098 /* DurometerModel.swift in Sources */,
 				E4228AD01E3EE1AB00E8A098 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +516,7 @@
 				E4228AF61E3EE1AC00E8A098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4228AF71E3EE1AC00E8A098 /* Build configuration list for PBXNativeTarget "DuromodTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +525,7 @@
 				E4228AF91E3EE1AC00E8A098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4228AFA1E3EE1AC00E8A098 /* Build configuration list for PBXNativeTarget "DuromodUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +534,7 @@
 				E4228AFC1E3EE1AC00E8A098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
