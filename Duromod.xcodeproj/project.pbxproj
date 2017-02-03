@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E4228AD01E3EE1AB00E8A098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228ACF1E3EE1AB00E8A098 /* AppDelegate.swift */; };
-		E4228AD21E3EE1AB00E8A098 /* ChooseScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AD11E3EE1AB00E8A098 /* ChooseScaleViewController.swift */; };
+		E4228AD21E3EE1AB00E8A098 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AD11E3EE1AB00E8A098 /* HomeViewController.swift */; };
 		E4228AD51E3EE1AB00E8A098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4228AD31E3EE1AB00E8A098 /* Main.storyboard */; };
 		E4228AD71E3EE1AB00E8A098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4228AD61E3EE1AB00E8A098 /* Assets.xcassets */; };
 		E4228ADA1E3EE1AB00E8A098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4228AD81E3EE1AB00E8A098 /* LaunchScreen.storyboard */; };
 		E4228AE51E3EE1AC00E8A098 /* DuromodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AE41E3EE1AC00E8A098 /* DuromodTests.swift */; };
 		E4228AF01E3EE1AC00E8A098 /* DuromodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AEF1E3EE1AC00E8A098 /* DuromodUITests.swift */; };
 		E4228AFE1E3EE30100E8A098 /* DurometerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228AFD1E3EE30100E8A098 /* DurometerModel.swift */; };
+		E4228B041E441E4000E8A098 /* ScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228B031E441E4000E8A098 /* ScaleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		E4228ACC1E3EE1AB00E8A098 /* Duromod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duromod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4228ACF1E3EE1AB00E8A098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4228AD11E3EE1AB00E8A098 /* ChooseScaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseScaleViewController.swift; sourceTree = "<group>"; };
+		E4228AD11E3EE1AB00E8A098 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E4228AD41E3EE1AB00E8A098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4228AD61E3EE1AB00E8A098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4228AD91E3EE1AB00E8A098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		E4228AEF1E3EE1AC00E8A098 /* DuromodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuromodUITests.swift; sourceTree = "<group>"; };
 		E4228AF11E3EE1AC00E8A098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4228AFD1E3EE30100E8A098 /* DurometerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurometerModel.swift; sourceTree = "<group>"; };
+		E4228B031E441E4000E8A098 /* ScaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				E4228ACF1E3EE1AB00E8A098 /* AppDelegate.swift */,
-				E4228AD11E3EE1AB00E8A098 /* ChooseScaleViewController.swift */,
+				E4228AD11E3EE1AB00E8A098 /* HomeViewController.swift */,
+				E4228B031E441E4000E8A098 /* ScaleViewController.swift */,
 				E4228AFD1E3EE30100E8A098 /* DurometerModel.swift */,
 				E4228AD31E3EE1AB00E8A098 /* Main.storyboard */,
 				E4228AD61E3EE1AB00E8A098 /* Assets.xcassets */,
@@ -265,9 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4228AD21E3EE1AB00E8A098 /* ChooseScaleViewController.swift in Sources */,
+				E4228AD21E3EE1AB00E8A098 /* HomeViewController.swift in Sources */,
 				E4228AFE1E3EE30100E8A098 /* DurometerModel.swift in Sources */,
 				E4228AD01E3EE1AB00E8A098 /* AppDelegate.swift in Sources */,
+				E4228B041E441E4000E8A098 /* ScaleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

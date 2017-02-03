@@ -66,7 +66,11 @@ struct DurometerModel {
         return c*d
     }
     
-    //MARK: - Enumerate Scales
+}
+
+//MARK: - Enumerate Scales
+
+extension DurometerModel {
     
     enum Scale: String {
         case shore = "Shore"
@@ -83,5 +87,19 @@ struct DurometerModel {
         case ooo_s = "OOO-S"
         case cf = "CF"
     }
+    
+    static var allScales: [DurometerModel.Scale] = [.shore,
+                                               .a,
+                                               .b,
+                                               .c,
+                                               .d,
+                                               .o,
+                                               .do_,
+                                               .oo,
+                                               .m,
+                                               .e,
+                                               .ooo,
+                                               .ooo_s,
+                                               .cf]
 }
 
