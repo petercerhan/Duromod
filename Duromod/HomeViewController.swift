@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    //@IBOutlet var scaleLabel: UILabel!
+    
     let scalesArray = DurometerModel.allScales
     
     var scale = DurometerModel.Scale.shore
