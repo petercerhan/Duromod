@@ -11,6 +11,7 @@ import UIKit
 class ScaleViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var doneButton: UIButton!
     
     var scaleArray: [DurometerModel.Scale] = []
     var selectedScale = DurometerModel.Scale.ooo
@@ -22,7 +23,8 @@ class ScaleViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Default")
         
         scaleArray = buildScaleArray()
-        
+        doneButton.backgroundColor = Colors.lightBlue
+
     }
 
     func buildScaleArray() -> [DurometerModel.Scale] {
@@ -48,10 +50,14 @@ extension ScaleViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.selectRow(at: firstCellPath, animated: false, scrollPosition: .none)
             hasSetInitialSelection = true
         }
+         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Default")!
         cell.textLabel!.text = scaleArray[indexPath.row].rawValue
-        //cell.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.3)
+        let bgColorView = UIView()
+
+        bgColorView.backgroundColor = Colors.lightBlue
+        cell.selectedBackgroundView = bgColorView
         return cell
     }
     
