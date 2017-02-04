@@ -72,23 +72,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ywd-Rr-yRg">
-                                <rect key="frame" x="0.0" y="173.5" width="375" height="438.5"/>
+                                <rect key="frame" x="0.0" y="173.5" width="375" height="423.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="C8G-gc-2Pe" id="FkN-38-5rG"/>
                                     <outlet property="delegate" destination="C8G-gc-2Pe" id="BLC-sZ-C7h"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-zw-dY2">
-                                <rect key="frame" x="5" y="617" width="365" height="45"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.72592592590000005" blue="0.96296296299999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-zw-dY2" customClass="AnimatedButton" customModule="Duromod" customModuleProvider="target">
+                                <rect key="frame" x="10" y="607" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.16828972266248296" green="0.59365910338649308" blue="0.75024794957359431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="RLF-FF-Xup"/>
+                                    <constraint firstAttribute="height" constant="50" id="RLF-FF-Xup"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="done" destination="C8G-gc-2Pe" eventType="touchUpInside" id="SBH-G4-PnQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a hardness scale:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLb-kA-F3L">
                                 <rect key="frame" x="16" y="40" width="343" height="29"/>
@@ -97,8 +100,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxs-Kx-x62" customClass="PaddedLabel" customModule="Duromod" customModuleProvider="target">
-                                <rect key="frame" x="153.5" y="99" width="69" height="46.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="146" y="99" width="84" height="46.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -107,7 +110,7 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="horizontalContentPadding">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
@@ -115,21 +118,22 @@
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ywd-Rr-yRg" firstAttribute="leading" secondItem="2Nu-4G-JFt" secondAttribute="leading" id="0hw-9s-LdM"/>
-                            <constraint firstItem="red-MH-koW" firstAttribute="top" secondItem="R8U-zw-dY2" secondAttribute="bottom" constant="5" id="4dN-T6-qDr"/>
-                            <constraint firstItem="R8U-zw-dY2" firstAttribute="leading" secondItem="2Nu-4G-JFt" secondAttribute="leading" constant="5" id="6GY-yu-a4B"/>
+                            <constraint firstItem="red-MH-koW" firstAttribute="top" secondItem="R8U-zw-dY2" secondAttribute="bottom" constant="10" id="4dN-T6-qDr"/>
+                            <constraint firstItem="R8U-zw-dY2" firstAttribute="leading" secondItem="2Nu-4G-JFt" secondAttribute="leading" constant="10" id="6GY-yu-a4B"/>
                             <constraint firstItem="gLb-kA-F3L" firstAttribute="leading" secondItem="2Nu-4G-JFt" secondAttribute="leadingMargin" id="8EI-u5-fAf"/>
                             <constraint firstItem="gLb-kA-F3L" firstAttribute="trailing" secondItem="2Nu-4G-JFt" secondAttribute="trailingMargin" id="8g4-O7-UWm"/>
                             <constraint firstItem="gLb-kA-F3L" firstAttribute="top" secondItem="Dqu-UZ-Kvp" secondAttribute="bottom" constant="20" id="Gcb-fj-HMm"/>
-                            <constraint firstAttribute="trailing" secondItem="R8U-zw-dY2" secondAttribute="trailing" constant="5" id="Gx9-eL-pBS"/>
+                            <constraint firstAttribute="trailing" secondItem="R8U-zw-dY2" secondAttribute="trailing" constant="10" id="Gx9-eL-pBS"/>
                             <constraint firstItem="uxs-Kx-x62" firstAttribute="top" secondItem="gLb-kA-F3L" secondAttribute="bottom" constant="30" id="Ogr-hv-QbM"/>
                             <constraint firstItem="Ywd-Rr-yRg" firstAttribute="top" secondItem="uxs-Kx-x62" secondAttribute="bottom" constant="28" id="a7j-UO-jBU"/>
                             <constraint firstItem="uxs-Kx-x62" firstAttribute="centerX" secondItem="2Nu-4G-JFt" secondAttribute="centerX" id="dFe-tO-Ghm"/>
-                            <constraint firstItem="R8U-zw-dY2" firstAttribute="top" secondItem="Ywd-Rr-yRg" secondAttribute="bottom" constant="5" id="qOx-io-ZBP"/>
+                            <constraint firstItem="R8U-zw-dY2" firstAttribute="top" secondItem="Ywd-Rr-yRg" secondAttribute="bottom" constant="10" id="qOx-io-ZBP"/>
                             <constraint firstAttribute="trailing" secondItem="Ywd-Rr-yRg" secondAttribute="trailing" id="uKA-WM-hmf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="R8U-zw-dY2" id="FFh-GP-oIb"/>
+                        <outlet property="scaleLabel" destination="uxs-Kx-x62" id="FfX-A9-3Q1"/>
                         <outlet property="tableView" destination="Ywd-Rr-yRg" id="f8u-YQ-FQt"/>
                     </connections>
                 </viewController>

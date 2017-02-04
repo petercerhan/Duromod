@@ -12,23 +12,30 @@ class ScaleViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var doneButton: UIButton!
+    @IBOutlet var scaleLabel: PaddedLabel!
     
     var scaleArray: [DurometerModel.Scale] = []
-    var selectedScale = DurometerModel.Scale.ooo
+    var selectedScale: DurometerModel.Scale!
     var hasSetInitialSelection = false
+    
+    var delegate: ScaleViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Default")
         
+        scaleLabel.text = selectedScale.rawValue
         scaleArray = buildScaleArray()
         doneButton.backgroundColor = Colors.lightBlue
-
     }
 
+    @IBAction func done() {
+        delegate.dismiss(scale: selectedScale)
+    }
+    
     func buildScaleArray() -> [DurometerModel.Scale] {
-        var array = [selectedScale]
+        var array = [selectedScale!]
         for scale in DurometerModel.allScales {
             if scale != selectedScale {
                 array.append(scale)
@@ -50,7 +57,6 @@ extension ScaleViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.selectRow(at: firstCellPath, animated: false, scrollPosition: .none)
             hasSetInitialSelection = true
         }
-         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Default")!
         cell.textLabel!.text = scaleArray[indexPath.row].rawValue
@@ -68,16 +74,15 @@ extension ScaleViewController: UITableViewDelegate, UITableViewDataSource {
     //MARK:- TableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-        
-        
-//        if indexPath.row == 0 && !hasSetInitialSelection {
-//            cell.setSelected(true, animated: false)
-//            hasSetInitialSelection = true
-//        }
-        
-        print("index path \(indexPath)")
-        
+        selectedScale = scaleArray[indexPath.row]
+        scaleLabel.text = selectedScale.rawValue
     }
     
 }
+
+protocol ScaleViewControllerDelegate {
+    func dismiss(scale: DurometerModel.Scale)
+}
+
+
+
