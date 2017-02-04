@@ -52,17 +52,17 @@
                                     <constraint firstAttribute="width" constant="97" id="t6O-hK-0UF"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="/ 100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUw-Sj-Rq6">
-                                <rect key="frame" x="246" y="182" width="79" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUw-Sj-Rq6">
+                                <rect key="frame" x="256" y="185" width="45.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMN-sa-Zdb">
-                                <rect key="frame" x="246" y="112" width="63" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMN-sa-Zdb">
+                                <rect key="frame" x="256" y="114" width="63" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="update"/>
                                 <connections>
@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3c5-M3-zmO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3s7-p1-goL"/>
                             <constraint firstItem="BSO-E4-X33" firstAttribute="centerY" secondItem="3c5-M3-zmO" secondAttribute="centerY" id="BRR-rm-Ft1"/>
@@ -78,7 +78,7 @@
                             <constraint firstItem="IUw-Sj-Rq6" firstAttribute="centerY" secondItem="3c5-M3-zmO" secondAttribute="centerY" id="Qg1-fJ-dug"/>
                             <constraint firstItem="IUw-Sj-Rq6" firstAttribute="leading" secondItem="VMN-sa-Zdb" secondAttribute="leading" id="bbY-KC-r67"/>
                             <constraint firstItem="WLF-e5-gxP" firstAttribute="trailing" secondItem="BSO-E4-X33" secondAttribute="trailing" id="dk4-RC-gvU"/>
-                            <constraint firstItem="IUw-Sj-Rq6" firstAttribute="leading" secondItem="3c5-M3-zmO" secondAttribute="trailing" constant="10" id="iGp-bx-27P"/>
+                            <constraint firstItem="IUw-Sj-Rq6" firstAttribute="leading" secondItem="3c5-M3-zmO" secondAttribute="trailing" constant="20" id="iGp-bx-27P"/>
                             <constraint firstItem="3c5-M3-zmO" firstAttribute="leading" secondItem="BSO-E4-X33" secondAttribute="trailing" constant="19" id="iJL-s1-kLC"/>
                             <constraint firstItem="3c5-M3-zmO" firstAttribute="top" secondItem="Q26-Am-icD" secondAttribute="bottom" constant="38" id="iX1-Gx-j4x"/>
                             <constraint firstItem="WLF-e5-gxP" firstAttribute="centerY" secondItem="Q26-Am-icD" secondAttribute="centerY" id="l3J-dn-ud3"/>
