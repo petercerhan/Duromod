@@ -108,12 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				E4228ACF1E3EE1AB00E8A098 /* AppDelegate.swift */,
-				E4228AD11E3EE1AB00E8A098 /* HomeViewController.swift */,
-				E4228B031E441E4000E8A098 /* ScaleViewController.swift */,
-				E4228AFD1E3EE30100E8A098 /* DurometerModel.swift */,
-				E4228B051E442F6900E8A098 /* Styles.swift */,
-				E4228B071E466AD100E8A098 /* PaddedLabel.swift */,
-				E48AC1061E4673B6001DD177 /* AnimatedButton.swift */,
+				E48AC1081E46C8D6001DD177 /* Model */,
+				E48AC1091E46C8DE001DD177 /* View */,
+				E48AC10A1E46C8F0001DD177 /* Controller */,
 				E4228AD31E3EE1AB00E8A098 /* Main.storyboard */,
 				E4228AD61E3EE1AB00E8A098 /* Assets.xcassets */,
 				E4228AD81E3EE1AB00E8A098 /* LaunchScreen.storyboard */,
@@ -138,6 +135,33 @@
 				E4228AF11E3EE1AC00E8A098 /* Info.plist */,
 			);
 			path = DuromodUITests;
+			sourceTree = "<group>";
+		};
+		E48AC1081E46C8D6001DD177 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4228AFD1E3EE30100E8A098 /* DurometerModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E48AC1091E46C8DE001DD177 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4228B051E442F6900E8A098 /* Styles.swift */,
+				E4228B071E466AD100E8A098 /* PaddedLabel.swift */,
+				E48AC1061E4673B6001DD177 /* AnimatedButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E48AC10A1E46C8F0001DD177 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4228AD11E3EE1AB00E8A098 /* HomeViewController.swift */,
+				E4228B031E441E4000E8A098 /* ScaleViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

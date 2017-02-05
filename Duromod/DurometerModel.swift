@@ -18,31 +18,31 @@ struct DurometerModel {
         get {
             switch scale {
             case .shore:
-                return (_F_0: 0.549, r: 0.0395, p_0: 0.254, k: 0.0751, si: 0.00254,  n: 1)
+                return (_F_0: 0.549, r: 0.000395, p_0: 0.00254, k: 0.0751, si: 0.0000254,  n: 1)
             case .a:
-                return (_F_0: 0.550, r: 0.000395, p_0: 0.0025, k: 5, si: 0.0025, n: 1)
+                return (_F_0: 0.550, r: 0.000395, p_0: 0.00250, k: 0.0750, si: 0.000025, n: 1)
             case .b:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.0025, n: 2)
+                return (_F_0: 0.550, r: 0.000670, p_0: 0.00250, k: 0.0750, si: 0.000025, n: 2)
             case .c:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.0025, n: 1)
+                return (_F_0: 0, r: 0.000670, p_0: 0.00250, k: 0.4445, si: 0.000025, n: 1)
             case .d:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.0025, n: 2)
+                return (_F_0: 0, r: 0.000670, p_0: 0.00250, k: 0.4445, si: 0.000025, n: 2)
             case .o:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.0025, n: 1.5)
+                return (_F_0: 0.55, r: 0.00119, p_0: 0.00250, k: 0.0750, si: 0.000025, n: 1.5)
             case .do_:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.0025, n: 1.5)
+                return (_F_0: 0, r: 0.00119, p_0: 0.00250, k: 0.4445, si: 0.000025, n: 1.5)
             case .oo:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.0025, n: 1.5)
+                return (_F_0: 0.203, r: 0.00119, p_0: 0.00250, k: 0.00908, si: 0.000025, n: 1.5)
             case .m:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.00125, n: 2)
+                return (_F_0: 0.324, r: 0.000394, p_0: 0.00125, k: 0.00440, si: 0.0000125, n: 2)
             case .e:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.0025, n: 1.5)
+                return (_F_0: 0.55, r: 0.0025, p_0: 0.00250, k: 0.00750, si: 0.000025, n: 1.5)
             case .ooo:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.0025, n: 1.5)
+                return (_F_0: 0.203, r: 0.00635, p_0: 0.00250, k: 0.00908, si: 0.000025, n: 1.5)
             case .ooo_s:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.005, n: 1.5)
+                return (_F_0: 0.167, r: 0.0107, p_0: 0.0050, k: 0.01765, si: 0.00005, n: 1.5)
             case .cf:
-                return (_F_0: 1, r: 2, p_0: 4, k: 5, si: 0.005, n: 1.5)
+                return (_F_0: 1.0987, r: 0.00635, p_0: 0.0050, k: 0.8829, si: 0.00005, n: 1.5)
             }
         }
     }
@@ -89,17 +89,17 @@ extension DurometerModel {
     }
     
     static var allScales: [DurometerModel.Scale] = [.shore,
-                                               .a,
-                                               .b,
-                                               .c,
-                                               .d,
-                                               .o,
-                                               .do_,
-                                               .oo,
-                                               .m,
-                                               .e,
-                                               .ooo,
-                                               .ooo_s,
-                                               .cf]
+                                                   .a,
+                                                   .b,
+                                                   .c,
+                                                   .d,
+                                                   .o,
+                                                   .do_,
+                                                   .oo,
+                                                   .m,
+                                                   .e,
+                                                   .ooo,
+                                                   .ooo_s,
+                                                   .cf]
 }
 
