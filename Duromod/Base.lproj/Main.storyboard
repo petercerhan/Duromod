@@ -78,14 +78,14 @@
                                 <rect key="frame" x="0.0" y="345" width="375" height="322"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrW-3o-Rs2">
-                                        <rect key="frame" x="182" y="148.5" width="10" height="26.5"/>
+                                        <rect key="frame" x="182" y="98" width="10" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="vrW-3o-Rs2" firstAttribute="centerY" secondItem="kFb-w6-oTv" secondAttribute="centerY" id="CUY-AS-4p0"/>
+                                    <constraint firstItem="vrW-3o-Rs2" firstAttribute="centerY" secondItem="kFb-w6-oTv" secondAttribute="centerY" constant="-50" id="CUY-AS-4p0"/>
                                     <constraint firstItem="vrW-3o-Rs2" firstAttribute="centerX" secondItem="kFb-w6-oTv" secondAttribute="centerX" id="LAp-zJ-5rV"/>
                                 </constraints>
                             </view>

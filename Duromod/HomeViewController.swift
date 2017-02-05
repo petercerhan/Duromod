@@ -132,12 +132,14 @@ extension HomeViewController: UITextFieldDelegate {
         
         guard let text = textField.text, let hardness = Double(text) else {
             alert(message: "Hardness measurement must be a number")
+            textField.text = "0"
             self.hardness = 0
             return
         }
     
         guard hardness >= 0 && hardness <= 100 else {
             alert(message: "Hardness measurement must be between 0 and 100")
+            textField.text = "100"
             self.hardness = 100
             return
         }
