@@ -13,7 +13,7 @@ class AnimatedButton: UIButton {
     var baseColor = Colors.lightBlue
     var highlightedColor = Colors.shadedLightBlue
     
-    var titleOffset = UIEdgeInsetsMake(CGFloat(5.0), CGFloat(5.0), CGFloat(0.0), CGFloat(0.0))
+    var titleOffset = UIEdgeInsetsMake(CGFloat(3.0), CGFloat(3.0), CGFloat(0.0), CGFloat(0.0))
     var zeroOffset = UIEdgeInsetsMake(CGFloat(0.0), CGFloat(0.0), CGFloat(0.0), CGFloat(0.0))
     
     override func beginTracking(_ touch: UITouch, with withEvent: UIEvent?) -> Bool {

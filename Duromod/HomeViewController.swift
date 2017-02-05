@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    //@IBOutlet var scaleLabel: UILabel!
+    @IBOutlet var scaleLabel: UILabel!
     
     let scalesArray = DurometerModel.allScales
     
@@ -35,8 +35,9 @@ extension HomeViewController: ScaleViewControllerDelegate {
     
     func dismiss(scale: DurometerModel.Scale) {
         self.scale = scale
-        //update calculation
+        scaleLabel.text = scale.rawValue
         dismiss(animated: true, completion: nil)
     }
     
 }
+
