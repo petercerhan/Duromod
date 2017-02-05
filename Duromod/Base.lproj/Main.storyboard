@@ -55,7 +55,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="I3v-VO-q3P"/>
                                 </connections>
@@ -78,8 +78,8 @@
                                 <rect key="frame" x="0.0" y="345" width="375" height="322"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrW-3o-Rs2">
-                                        <rect key="frame" x="183" y="151" width="8" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="182" y="148.5" width="10" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -118,6 +118,7 @@
                         <outlet property="bottomView" destination="kFb-w6-oTv" id="GgT-V7-qmY"/>
                         <outlet property="hardnessRangeLabel" destination="IUw-Sj-Rq6" id="dLg-hh-d5p"/>
                         <outlet property="hardnessTagLabel" destination="BSO-E4-X33" id="57q-mx-dOu"/>
+                        <outlet property="modulusLabel" destination="vrW-3o-Rs2" id="viS-U2-IQu"/>
                         <outlet property="scaleLabel" destination="Q26-Am-icD" id="63f-fq-zyk"/>
                         <outlet property="scaleTagLabel" destination="WLF-e5-gxP" id="Ji4-OH-FNU"/>
                         <outlet property="textField" destination="3c5-M3-zmO" id="zMH-Lg-PuC"/>

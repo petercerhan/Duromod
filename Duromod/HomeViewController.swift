@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet var scaleLabel: UILabel!
+    @IBOutlet var modulusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
     @IBOutlet var backgroundView: UIView!
@@ -22,12 +23,27 @@ class HomeViewController: UIViewController {
     
     let scalesArray = DurometerModel.allScales
     
-    var scale = DurometerModel.Scale.shore
-    var hardness: Double?
+    var scale = DurometerModel.Scale.shore {
+        didSet {
+            recalculateModulus()
+        }
+    }
+    var hardness: Double? {
+        didSet {
+            if hardness == 100 {
+                modulusLabel.text = "Infinite"
+            } else {
+                recalculateModulus()
+            }
+        }
+    }
+    
+    var keyboardIsRaised = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        subscribeToKeyboardNotifications()
         print("\(DurometerModel(scale: .a).getModulus(measuredHardness: 0.9))")
     }
 
@@ -38,17 +54,55 @@ class HomeViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    
+    
+    func recalculateModulus() {
+        if let hardness = hardness {
+            modulusLabel.text = "\(DurometerModel(scale: scale).getModulus(measuredHardness: hardness))"
+        }
+    }
+    
+    
     func configureUI() {
         title = "Duromod"
-        scaleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
-        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
-        bottomView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
-        scaleTagLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
-        hardnessTagLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
-        hardnessRangeLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
-        youngsTagLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
+        scaleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
+        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
+        bottomView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
+        scaleTagLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
+        hardnessTagLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
+        hardnessRangeLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
+        youngsTagLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
     }
+    
+    func backgroundTouched() {
+        if keyboardIsRaised {
+            dismissKeyboard()
+        }
+    }
+    
+    //MARK: - Keyboard notifications
+    
+    func subscribeToKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func unsubscribeFromKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func keyboardWillShow(_ notification: Notification) {
+        keyboardIsRaised = true
+    }
+    
+    func keyboardWillHide(_ notification: Notification) {
+        keyboardIsRaised = false
+    }
+    
 }
+
+//MARK: - ScaleViewControllerDelegate
 
 extension HomeViewController: ScaleViewControllerDelegate {
     
@@ -59,6 +113,8 @@ extension HomeViewController: ScaleViewControllerDelegate {
     }
     
 }
+
+//MARK: - UITextFieldDelegate
 
 extension HomeViewController: UITextFieldDelegate {
     
@@ -72,22 +128,26 @@ extension HomeViewController: UITextFieldDelegate {
     }
     
     func dismissKeyboard() {
+        textField.resignFirstResponder()
+        
         guard let text = textField.text, let hardness = Double(text) else {
             alert(message: "Hardness measurement must be a number")
+            self.hardness = 0
             return
         }
     
         guard hardness >= 0 && hardness <= 100 else {
             alert(message: "Hardness measurement must be between 0 and 100")
+            self.hardness = 100
             return
         }
         
         self.hardness = hardness
         //update modulus label
-        
-        textField.resignFirstResponder()
     }
 }
+
+//MARK: - Alert pop-up
 
 extension HomeViewController {
  
