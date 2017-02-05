@@ -44,7 +44,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         subscribeToKeyboardNotifications()
-        print("\(DurometerModel(scale: .a).getModulus(measuredHardness: 0.9))")
     }
 
     @IBAction func updateScale() {
@@ -54,14 +53,22 @@ class HomeViewController: UIViewController {
         present(vc, animated: true)
     }
     
-    
-    
     func recalculateModulus() {
         if let hardness = hardness {
-            modulusLabel.text = "\(DurometerModel(scale: scale).getModulus(measuredHardness: hardness))"
+            var modulus = DurometerModel(scale: scale).getModulus(measuredHardness: hardness)
+            var dimensionLabel = "Pa/N"
+            print("modulus \(modulus)")
+            if modulus >= 1000000 {
+                modulus = round(modulus / 100) / 10000
+                dimensionLabel = "MPa/N"
+            } else if modulus >= 1000 {
+                modulus = round(modulus * 10) / 10000
+                dimensionLabel = "KPa/N"
+            }
+            
+            modulusLabel.text = "\(modulus) \(dimensionLabel)"
         }
     }
-    
     
     func configureUI() {
         title = "Duromod"
