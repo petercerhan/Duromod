@@ -10,7 +10,16 @@ import Foundation
 
 struct DurometerModel {
     
-    //F_0 =
+    /*
+     F_0 = Force of spring preload (N)
+     r = Indentor radius (meters)
+     p_0 = Initial indentor protrusion, (meters)
+     k = Spring constant (N/DH)
+     si = Spring sensitivity (displacement per degree of hardness, meters/DH)
+     n = Exponent parameter defined by indentor shape: Conical = 2, Round = 3/2, Flat = 1
+     
+     note: DH = "Degree of hardness"
+    */
     typealias Properties = (_F_0: Double, r: Double, p_0: Double, k: Double, si: Double, n: Double)
     
     var scale: Scale
