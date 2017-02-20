@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,12 +31,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hardness:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSO-E4-X33">
                                 <rect key="frame" x="20" y="190" width="91" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Young's Modulus:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hit-NW-7tw">
-                                <rect key="frame" x="108" y="321" width="159" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,22 +70,32 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFb-w6-oTv">
-                                <rect key="frame" x="0.0" y="345" width="375" height="322"/>
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrW-3o-Rs2">
-                                        <rect key="frame" x="182" y="98" width="10" height="27"/>
+                                        <rect key="frame" x="182" y="104" width="10" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Young's Modulus:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hit-NW-7tw">
+                                        <rect key="frame" x="108" y="15" width="159" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <color key="backgroundColor" red="0.4552918521866659" green="0.68749916341576323" blue="0.9715161919593811" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="vrW-3o-Rs2" firstAttribute="centerY" secondItem="kFb-w6-oTv" secondAttribute="centerY" constant="-50" id="CUY-AS-4p0"/>
+                                    <constraint firstItem="vrW-3o-Rs2" firstAttribute="centerY" secondItem="kFb-w6-oTv" secondAttribute="centerY" priority="900" constant="-50" id="CUY-AS-4p0"/>
                                     <constraint firstItem="vrW-3o-Rs2" firstAttribute="centerX" secondItem="kFb-w6-oTv" secondAttribute="centerX" id="LAp-zJ-5rV"/>
+                                    <constraint firstItem="vrW-3o-Rs2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hit-NW-7tw" secondAttribute="bottom" constant="20" id="Yfp-j2-kVm"/>
+                                    <constraint firstItem="Hit-NW-7tw" firstAttribute="centerX" secondItem="kFb-w6-oTv" secondAttribute="centerX" id="gsB-Yq-btF"/>
+                                    <constraint firstItem="Hit-NW-7tw" firstAttribute="top" secondItem="kFb-w6-oTv" secondAttribute="top" constant="15" id="z2S-1j-37V"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.85257000033625485" green="0.85257000033625485" blue="0.85257000033625485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3c5-M3-zmO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3s7-p1-goL"/>
                             <constraint firstItem="kFb-w6-oTv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AhZ-P4-h35"/>
@@ -100,15 +105,13 @@
                             <constraint firstAttribute="trailing" secondItem="kFb-w6-oTv" secondAttribute="trailing" id="XRy-hr-14g"/>
                             <constraint firstItem="IUw-Sj-Rq6" firstAttribute="leading" secondItem="VMN-sa-Zdb" secondAttribute="leading" id="bbY-KC-r67"/>
                             <constraint firstItem="WLF-e5-gxP" firstAttribute="trailing" secondItem="BSO-E4-X33" secondAttribute="trailing" id="dk4-RC-gvU"/>
-                            <constraint firstItem="kFb-w6-oTv" firstAttribute="top" secondItem="Hit-NW-7tw" secondAttribute="bottom" id="gLd-On-SfO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kFb-w6-oTv" secondAttribute="bottom" id="h8e-3d-Zey"/>
                             <constraint firstItem="IUw-Sj-Rq6" firstAttribute="leading" secondItem="3c5-M3-zmO" secondAttribute="trailing" constant="20" id="iGp-bx-27P"/>
                             <constraint firstItem="3c5-M3-zmO" firstAttribute="leading" secondItem="BSO-E4-X33" secondAttribute="trailing" constant="19" id="iJL-s1-kLC"/>
                             <constraint firstItem="3c5-M3-zmO" firstAttribute="top" secondItem="Q26-Am-icD" secondAttribute="bottom" constant="38" id="iX1-Gx-j4x"/>
                             <constraint firstItem="WLF-e5-gxP" firstAttribute="centerY" secondItem="Q26-Am-icD" secondAttribute="centerY" id="l3J-dn-ud3"/>
-                            <constraint firstItem="Hit-NW-7tw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mmq-X2-pvS"/>
                             <constraint firstItem="VMN-sa-Zdb" firstAttribute="centerY" secondItem="Q26-Am-icD" secondAttribute="centerY" id="qQr-D7-HzI"/>
-                            <constraint firstItem="Hit-NW-7tw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rzb-EN-ktL"/>
+                            <constraint firstItem="kFb-w6-oTv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="r5W-IB-P32"/>
                             <constraint firstItem="Q26-Am-icD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="sgA-Hp-2m1"/>
                         </constraints>
                     </view>
