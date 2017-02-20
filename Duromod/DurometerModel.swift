@@ -72,7 +72,6 @@ struct DurometerModel {
         let c = a + b*_H
         let d: Double = pow((1 - _H), -n)
         
-        
         return c*d
     }
     
