@@ -11,6 +11,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="AIW-NS-pDO">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" id="WK2-Yw-pCV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yij-kF-xlg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ejc-4X-1UL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pjz-X6-rQy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-sL-EB4">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">DuroMod allows Young's modulus to be derived from the measured hardness of rubber and plastic polymers. Duromod works for all 12 durometer scales that conform to ASTM D2240-05, or equivalent. DuroMod conversions were developed at the Rheology Research Center of the University of Wisconsin at Madison, and are based on linear elastic indentation mechanics. For more detailed information, please refer to the following article published in the Journal of Testing and Evaluation: [Mix, A.W. and A.J. Giacomin, "Standardized Polymer Durometry," Journal of Testing and Evaluation, 39(4), 1-10 (July, 2011).]</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A3F-sL-EB4" firstAttribute="leading" secondItem="pjz-X6-rQy" secondAttribute="leading" id="4mL-Of-CUe"/>
+                            <constraint firstItem="A3F-sL-EB4" firstAttribute="top" secondItem="Yij-kF-xlg" secondAttribute="bottom" constant="8" id="AtV-Nv-JJt"/>
+                            <constraint firstAttribute="trailing" secondItem="A3F-sL-EB4" secondAttribute="trailing" id="hEs-Kl-H6L"/>
+                            <constraint firstItem="ejc-4X-1UL" firstAttribute="top" secondItem="A3F-sL-EB4" secondAttribute="bottom" id="ia9-we-3mA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnE-ub-khy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="121.88905547226388"/>
+        </scene>
         <!--Duromod-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -115,7 +148,13 @@
                             <constraint firstItem="Q26-Am-icD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="sgA-Hp-2m1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oA7-3d-U8q"/>
+                    <navigationItem key="navigationItem" id="oA7-3d-U8q">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Yt7-NS-QRH">
+                            <connections>
+                                <action selector="about" destination="BYZ-38-t0r" id="ARh-To-w6N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backgroundView" destination="8bC-Xf-vdC" id="eKn-EE-aoF"/>
                         <outlet property="bottomView" destination="kFb-w6-oTv" id="GgT-V7-qmY"/>

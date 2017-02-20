@@ -62,6 +62,11 @@ class HomeViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    @IBAction func about() {
+        let vc = storyboard!.instantiateViewController(withIdentifier: "AboutViewController")
+        navigationController!.pushViewController(vc, animated: true)
+    }
+    
     func recalculateModulus() {
         if let hardness = hardness {
             var modulus = DurometerModel(scale: scale).getModulus(measuredHardness: hardness)
