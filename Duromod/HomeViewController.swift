@@ -63,8 +63,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func about() {
-        let vc = storyboard!.instantiateViewController(withIdentifier: "AboutViewController")
-        navigationController!.pushViewController(vc, animated: true)
+        let vc = storyboard!.instantiateViewController(withIdentifier: "AboutNavigationViewController")
+        present(vc, animated: true)
     }
     
     func recalculateModulus() {

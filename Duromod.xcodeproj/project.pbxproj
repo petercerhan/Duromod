@@ -18,6 +18,7 @@
 		E4228B041E441E4000E8A098 /* ScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228B031E441E4000E8A098 /* ScaleViewController.swift */; };
 		E4228B061E442F6900E8A098 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228B051E442F6900E8A098 /* Styles.swift */; };
 		E4228B081E466AD100E8A098 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4228B071E466AD100E8A098 /* PaddedLabel.swift */; };
+		E482BC6B1E5BB50300EB69B7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E482BC6A1E5BB50300EB69B7 /* AboutViewController.swift */; };
 		E48AC1071E4673B6001DD177 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AC1061E4673B6001DD177 /* AnimatedButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		E4228B031E441E4000E8A098 /* ScaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleViewController.swift; sourceTree = "<group>"; };
 		E4228B051E442F6900E8A098 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		E4228B071E466AD100E8A098 /* PaddedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		E482BC6A1E5BB50300EB69B7 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E48AC1061E4673B6001DD177 /* AnimatedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +162,7 @@
 			children = (
 				E4228AD11E3EE1AB00E8A098 /* HomeViewController.swift */,
 				E4228B031E441E4000E8A098 /* ScaleViewController.swift */,
+				E482BC6A1E5BB50300EB69B7 /* AboutViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				E4228B061E442F6900E8A098 /* Styles.swift in Sources */,
 				E4228AFE1E3EE30100E8A098 /* DurometerModel.swift in Sources */,
 				E4228AD01E3EE1AB00E8A098 /* AppDelegate.swift in Sources */,
+				E482BC6B1E5BB50300EB69B7 /* AboutViewController.swift in Sources */,
 				E4228B041E441E4000E8A098 /* ScaleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

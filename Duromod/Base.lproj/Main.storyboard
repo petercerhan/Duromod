@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--About DuroMod-->
         <scene sceneID="AIW-NS-pDO">
             <objects>
-                <viewController storyboardIdentifier="AboutViewController" id="WK2-Yw-pCV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutViewController" title="About DuroMod" automaticallyAdjustsScrollViewInsets="NO" id="WK2-Yw-pCV" customClass="AboutViewController" customModule="Duromod" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yij-kF-xlg"/>
                         <viewControllerLayoutGuide type="bottom" id="ejc-4X-1UL"/>
@@ -23,26 +23,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-sL-EB4">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">DuroMod allows Young's modulus to be derived from the measured hardness of rubber and plastic polymers. Duromod works for all 12 durometer scales that conform to ASTM D2240-05, or equivalent. DuroMod conversions were developed at the Rheology Research Center of the University of Wisconsin at Madison, and are based on linear elastic indentation mechanics. For more detailed information, please refer to the following article published in the Journal of Testing and Evaluation: [Mix, A.W. and A.J. Giacomin, "Standardized Polymer Durometry," Journal of Testing and Evaluation, 39(4), 1-10 (July, 2011).]</mutableString>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-A7-tfS" customClass="AnimatedButton" customModule="Duromod" customModuleProvider="target">
+                                <rect key="frame" x="10" y="607" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.16828972270000001" green="0.59365910340000005" blue="0.75024794959999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QGX-iC-5a4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="done" destination="WK2-Yw-pCV" eventType="touchUpInside" id="fWX-g9-dtF"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-sL-EB4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="533"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">DuroMod allows Young's modulus to be derived from the measured hardness of rubber and plastic polymers. Duromod works for all 12 durometer scales that conform to ASTM D2240-05, or equivalent. DuroMod conversions were developed at the Rheology Research Center of the University of Wisconsin at Madison, and are based on linear elastic indentation mechanics. For more detailed information, please refer to the following article published in the Journal of Testing and Evaluation: [Mix, A.W. and A.J. Giacomin, "Standardized Polymer Durometry," Journal of Testing and Evaluation, 39(4), 1-10 (July, 2011).]</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="A3F-sL-EB4" firstAttribute="leading" secondItem="pjz-X6-rQy" secondAttribute="leading" id="4mL-Of-CUe"/>
-                            <constraint firstItem="A3F-sL-EB4" firstAttribute="top" secondItem="Yij-kF-xlg" secondAttribute="bottom" constant="8" id="AtV-Nv-JJt"/>
+                            <constraint firstAttribute="trailing" secondItem="cYH-A7-tfS" secondAttribute="trailing" constant="10" id="4yt-Na-frW"/>
+                            <constraint firstItem="A3F-sL-EB4" firstAttribute="top" secondItem="Yij-kF-xlg" secondAttribute="bottom" id="AtV-Nv-JJt"/>
+                            <constraint firstItem="cYH-A7-tfS" firstAttribute="leading" secondItem="pjz-X6-rQy" secondAttribute="leading" constant="10" id="foC-r9-7QQ"/>
                             <constraint firstAttribute="trailing" secondItem="A3F-sL-EB4" secondAttribute="trailing" id="hEs-Kl-H6L"/>
-                            <constraint firstItem="ejc-4X-1UL" firstAttribute="top" secondItem="A3F-sL-EB4" secondAttribute="bottom" id="ia9-we-3mA"/>
+                            <constraint firstItem="ejc-4X-1UL" firstAttribute="top" secondItem="cYH-A7-tfS" secondAttribute="bottom" constant="10" id="iMS-jQ-f74"/>
+                            <constraint firstItem="cYH-A7-tfS" firstAttribute="top" secondItem="A3F-sL-EB4" secondAttribute="bottom" constant="10" id="yGh-eA-0GV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="About DuroMod" id="Ipf-2Z-7Ut"/>
+                    <connections>
+                        <outlet property="doneButton" destination="cYH-A7-tfS" id="2OK-GE-ovI"/>
+                        <outlet property="textView" destination="A3F-sL-EB4" id="Fni-mR-tLJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnE-ub-khy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="121.88905547226388"/>
+            <point key="canvasLocation" x="1983" y="122"/>
         </scene>
         <!--Duromod-->
         <scene sceneID="tne-QT-ifu">
@@ -149,7 +169,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oA7-3d-U8q">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Yt7-NS-QRH">
+                        <barButtonItem key="rightBarButtonItem" title="About" id="Yt7-NS-QRH">
                             <connections>
                                 <action selector="about" destination="BYZ-38-t0r" id="ARh-To-w6N"/>
                             </connections>
@@ -270,6 +290,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkt-Fw-PJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="776.76161919040487"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kOg-7Z-0NQ">
+            <objects>
+                <navigationController storyboardIdentifier="AboutNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="jUG-OS-vjK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oev-nD-Kc1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WK2-Yw-pCV" kind="relationship" relationship="rootViewController" id="AL6-HA-5GW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90N-CW-TKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="121.88905547226388"/>
         </scene>
     </scenes>
 </document>
