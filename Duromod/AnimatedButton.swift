@@ -10,8 +10,8 @@ import UIKit
 
 class AnimatedButton: UIButton {
     
-    var baseColor = Colors.lightBlue
-    var highlightedColor = Colors.shadedLightBlue
+    var baseColor = Colors.darkBlue
+    var highlightedColor = Colors.shadedDarkBlue
     
     var titleOffset = UIEdgeInsetsMake(CGFloat(3.0), CGFloat(3.0), CGFloat(0.0), CGFloat(0.0))
     var zeroOffset = UIEdgeInsetsMake(CGFloat(0.0), CGFloat(0.0), CGFloat(0.0), CGFloat(0.0))

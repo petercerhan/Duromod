@@ -25,7 +25,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-A7-tfS" customClass="AnimatedButton" customModule="Duromod" customModuleProvider="target">
                                 <rect key="frame" x="10" y="607" width="355" height="50"/>
-                                <color key="backgroundColor" red="0.16828972270000001" green="0.59365910340000005" blue="0.75024794959999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0090107426683662187" green="0.33624848291469556" blue="0.54691465736040601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QGX-iC-5a4"/>
                                 </constraints>
@@ -123,10 +123,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFb-w6-oTv">
-                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="334" width="375" height="333"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrW-3o-Rs2">
-                                        <rect key="frame" x="182" y="104" width="10" height="27"/>
+                                        <rect key="frame" x="182" y="103" width="10" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.4552918521866659" green="0.68749916341576323" blue="0.9715161919593811" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.4559151491400365" green="0.73202645308189496" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="vrW-3o-Rs2" firstAttribute="centerY" secondItem="kFb-w6-oTv" secondAttribute="centerY" priority="900" constant="-50" id="CUY-AS-4p0"/>
                                     <constraint firstItem="vrW-3o-Rs2" firstAttribute="centerX" secondItem="kFb-w6-oTv" secondAttribute="centerX" id="LAp-zJ-5rV"/>
@@ -213,7 +213,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-zw-dY2" customClass="AnimatedButton" customModule="Duromod" customModuleProvider="target">
                                 <rect key="frame" x="10" y="607" width="355" height="50"/>
-                                <color key="backgroundColor" red="0.16828972266248296" green="0.59365910338649308" blue="0.75024794957359431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.52941176469999995" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RLF-FF-Xup"/>
                                 </constraints>
@@ -271,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZx-Zl-hlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983.2" y="778.56071964017997"/>
+            <point key="canvasLocation" x="1982" y="777"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U7y-HZ-e7b">

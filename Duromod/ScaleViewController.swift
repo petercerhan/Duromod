@@ -27,7 +27,7 @@ class ScaleViewController: UIViewController {
         
         scaleLabel.text = selectedScale.rawValue
         scaleArray = buildScaleArray()
-        doneButton.backgroundColor = Colors.lightBlue
+        doneButton.backgroundColor = Colors.darkBlue
     }
 
     @IBAction func done() {

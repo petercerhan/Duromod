@@ -10,7 +10,9 @@ import UIKit
 
 struct Colors {
     
-    static let lightBlue = UIColor(red: 0.20, green: 0.73, blue: 0.96, alpha: 1.0)
-    static let shadedLightBlue = UIColor(red: 0.17, green: 0.59, blue: 0.75, alpha: 1.0)
+    static let darkBlue = UIColor(red: 0.02, green: 0.53, blue: 0.85, alpha: 1.0)
+    static let shadedDarkBlue = UIColor(red: 0.02, green: 0.34, blue: 0.55, alpha: 1.0)
+    
+    static let lightBlue = UIColor(red: 0.45, green: 0.73, blue: 1.0, alpha: 1.0)
     
 }
