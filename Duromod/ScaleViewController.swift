@@ -62,7 +62,7 @@ extension ScaleViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel!.text = scaleArray[indexPath.row].rawValue
         let bgColorView = UIView()
 
-        bgColorView.backgroundColor = Colors.lightBlue
+        bgColorView.backgroundColor = Colors.darkBlue
         cell.selectedBackgroundView = bgColorView
         return cell
     }
