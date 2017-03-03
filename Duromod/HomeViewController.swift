@@ -85,7 +85,7 @@ class HomeViewController: UIViewController {
     }
     
     func configureUI() {
-        title = "Duromod"
+        title = "DuroMod"
         scaleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
         bottomView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
