@@ -235,7 +235,7 @@
 				TargetAttributes = {
 					E4228ACB1E3EE1AB00E8A098 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = A7CP3AL7A5;
+						DevelopmentTeam = GS9V63QRBV;
 						ProvisioningStyle = Automatic;
 					};
 					E4228ADF1E3EE1AC00E8A098 = {
@@ -461,10 +461,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A7CP3AL7A5;
+				DEVELOPMENT_TEAM = GS9V63QRBV;
 				INFOPLIST_FILE = Duromod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boredomapplieddev.Duromod;
+				PRODUCT_BUNDLE_IDENTIFIER = com.duromod.Duromod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -475,10 +475,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A7CP3AL7A5;
+				DEVELOPMENT_TEAM = GS9V63QRBV;
 				INFOPLIST_FILE = Duromod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boredomapplieddev.Duromod;
+				PRODUCT_BUNDLE_IDENTIFIER = com.duromod.Duromod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
