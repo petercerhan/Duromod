@@ -71,7 +71,7 @@ class HomeViewController: UIViewController {
         if let hardness = hardness {
             var modulus = DurometerModel(scale: scale).getModulus(measuredHardness: hardness)
             var dimensionLabel = "Pa/N"
-            print("modulus \(modulus)")
+            
             if modulus >= 1000000 {
                 modulus = round(modulus / 100) / 10000
                 dimensionLabel = "MPa/N"
