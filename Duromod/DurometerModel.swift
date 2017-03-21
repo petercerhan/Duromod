@@ -74,9 +74,23 @@ struct DurometerModel {
         let c = a + b*_H
         let d: Double = pow((1 - _H), -n)
         
-        return c*d*factor
+        let result = c*d*factor
+        
+        if result == 0 {
+            return result
+        } else {
+            return roundModulus(result, sigfigs: 4)
+        }
     }
     
+    func roundModulus(_ value: Double, sigfigs: Int) -> Double {
+        let places = trunc(log2(value)/log2(10)) + 1
+        
+        let scaleValue = pow(10, places - Double(sigfigs))
+        let roundedValue = round(value / scaleValue) * scaleValue
+        
+        return roundedValue
+    }
 }
 
 //MARK: - Enumerate Scales
