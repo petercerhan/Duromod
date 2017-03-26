@@ -18,9 +18,12 @@ class AboutViewController: UIViewController {
         
         doneButton.backgroundColor = Colors.darkBlue
         
-        textView.text = "\nDuroMod version 1.1 \n\nDuroMod allows Young's modulus to be derived from the measured hardness of rubber and plastic polymers, and works for all 12 durometer scales that conform to ASTM D2240-05, or equivalent. DuroMod conversions were developed at the Rheology Research Center of the University of Wisconsin at Madison, and are based on linear elastic indentation mechanics. \n\nFor more detailed information, please refer to the following article published in the Journal of Testing and Evaluation: \n\n[Mix, A.W. and A.J. Giacomin, \"Standardized Polymer Durometry,\" Journal of Testing and Evaluation, 39(4), 1-10 (July, 2011).]"
+        let text = "<br>DuroMod<span class='s2'><sup>TM</sup></span>, v. 1.1, Development MG, Minneapolis, MN (2017) <br><br>DuroMod allows Young's modulus to be derived from the measured hardness of rubber and plastics, and works for the Shore scale and for all 12 durometer scales that conform to ASTM D2240-05, or equivalent. DuroMod conversions were developed at the Rheology Research Center of the University of Wisconsin at Madison, and are based on linear elastic indentation mechanics [1]. <br><br>[1] Mix, A.W. and A.J. Giacomin, \"Standardized Polymer Durometry,\" <i>Journal of Testing and Evaluation</i>, <b>39</b>(4), 1-10 (July, 2011)."
+
+        textView.setText(fromHTML: text)
+
     }
-    
+        
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
