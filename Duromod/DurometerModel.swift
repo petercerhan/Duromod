@@ -128,3 +128,29 @@ extension DurometerModel {
                                                    .cf]
 }
 
+
+//MARK: - Formatted Young's Modulus Reading for display
+
+extension DurometerModel {
+    func formattedModulus(forHardness hardness: Double) -> String {
+        var modulus = getModulus(measuredHardness: hardness)
+        var dimensionLabel = "Pa"
+        
+        if modulus >= 1_000_000 {
+            modulus = modulus / 1_000_000
+            dimensionLabel = "MPa"
+        } else if modulus >= 1000 {
+            modulus = modulus / 1000
+            dimensionLabel = "KPa"
+        }
+        
+        let formatter = NumberFormatter()
+        formatter.usesSignificantDigits = true
+        formatter.minimumSignificantDigits = 4
+        formatter.maximumSignificantDigits = 4
+        
+        let s = formatter.string(from: NSNumber(floatLiteral: modulus))!
+        
+        return "\(s) \(dimensionLabel)"
+    }
+}
