@@ -19,7 +19,7 @@ extension UITextView {
         
         if let data = (startString + htmlString + endString).data(using: .utf8) {
             do {
-                formattedString = try NSMutableAttributedString(data: data, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+                formattedString = try NSMutableAttributedString(data: data, options: [NSAttributedString.DocumentAttributeKey.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
             }
             catch {
                 print("error creating attributed string")

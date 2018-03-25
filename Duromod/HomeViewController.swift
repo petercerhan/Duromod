@@ -84,7 +84,7 @@ class HomeViewController: UIViewController {
         youngsTagLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundTouched)))
     }
     
-    func backgroundTouched() {
+    @objc func backgroundTouched() {
         if keyboardIsRaised {
             dismissKeyboard()
         }
@@ -102,11 +102,11 @@ class HomeViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWillShow(_ notification: Notification) {
+    @objc func keyboardWillShow(_ notification: Notification) {
         keyboardIsRaised = true
     }
     
-    func keyboardWillHide(_ notification: Notification) {
+    @objc func keyboardWillHide(_ notification: Notification) {
         keyboardIsRaised = false
     }
     
